@@ -17,7 +17,7 @@ lang = req.headers["accept-language"];
       req.on('data', function (data) {
         body += data;
         
-        // You need to be able to destroy the conenction if the file is too large
+        // You need to be able to destroy the connection if the file is too large
         // If not a user can shutdown your server by trying to upload an infinite file
         if (body.length > 1e6) {
           req.connection.destroy();
